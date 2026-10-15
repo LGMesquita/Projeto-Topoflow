@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width,
+             initial-scale=1.0"
+  />
+  <title>
+    Desktop Foundation
+  </title>
+</head>
+
+<body>
+  <h1>
+  Desktop Foundation
+</h1>
+
+<section>
+
+  <h2>
+    Aplicação
+  </h2>
+
+  <p>
+
+    Versão:
+
+    <strong id="version">
+      carregando...
+    </strong>
+
+  </p>
+
+  <button id="ping">
+    Testar IPC
+  </button>
+
+
+  <pre id="result"></pre>
+
+</section>
+
+<hr />
+
+<section>
+
+  <h2>
+    Configurações
+  </h2>
+
+  <form id="settings-form">
+
+    <div>
+      <label for="user-name">
+        Nome
+      </label>
+      <input
+        id="user-name"
+        type="text"
+        maxlength="100"
+        required
+      />
+    </div>
+    <div>
+
+      <label for="theme">
+        Tema
+      </label>
+      <select id="theme">
+        <option value="dark">
+          Escuro
+        </option>
+        <option value="light">
+          Claro
+        </option>
+      </select>
+    </div>
+    
+    <button type="submit">
+      Salvar configurações
+    </button>
+    <p id="settings-message"></p>
+  
+  </form>
+</section>
+</body>
+</html>

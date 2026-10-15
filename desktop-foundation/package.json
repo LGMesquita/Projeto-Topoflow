@@ -1,0 +1,55 @@
+{
+  "name": "desktop-foundation",
+  "productName": "desktop-foundation",
+  "version": "1.0.0",
+  "private": true,
+  "description": "My Electron application description",
+  "keywords": [],
+  "license": "MIT",
+  "author": "lgmes",
+  "main": ".webpack/main/index.cjs",
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "release": "electron-forge release",
+    "lint": "oxlint && oxfmt --check",
+    "lint:fix": "oxlint --fix && oxfmt --write",
+    "typecheck": "npm run typecheck:main && npm run typecheck:preload && npm run typecheck:renderer",
+    "typecheck:main": "tsc --noEmit -p tsconfig.main.json",
+    "typecheck:preload": "tsc --noEmit -p tsconfig.preload.json",
+    "typecheck:renderer": "tsc --noEmit -p tsconfig.renderer.json"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^8.0.1",
+    "@electron-forge/maker-deb": "^8.0.1",
+    "@electron-forge/maker-rpm": "^8.0.1",
+    "@electron-forge/maker-squirrel": "^8.0.1",
+    "@electron-forge/maker-zip": "^8.0.1",
+    "@electron-forge/plugin-auto-unpack-natives": "^8.0.1",
+    "@electron-forge/plugin-fuses": "^8.0.1",
+    "@electron-forge/plugin-webpack": "0.0.2",
+    "@electron/fuses": "^2.1.3",
+    "@types/better-sqlite3": "9.6.0",
+    "@types/electron-squirrel-startup": "^1.0.2",
+    "@vercel/webpack-asset-relocator-loader": "^1.7.3",
+    "css-loader": "^6.11.0",
+    "electron": "44.7.2",
+    "fork-ts-checker-webpack-plugin": "9.1.0",
+    "node-loader": "^2.1.0",
+    "oxfmt": "0.73.0",
+    "oxlint": "^1.88.0",
+    "style-loader": "^3.3.4",
+    "ts-loader": "^9.6.2",
+    "typescript": "^6.0.3"
+  },
+  "dependencies": {
+    "better-sqlite3": "13.0.3",
+    "electron-squirrel-startup": "^1.0.1",
+    "zod": "4.6.7"
+  },
+  "allowScripts": {
+    "better-sqlite3@13.0.3": true,
+    "electron-winstaller@5.4.4": true
+  }
+}
